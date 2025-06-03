@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitation | Samuel & Marine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Warm Neutrals (Off-White, Taupe, Gold Accent) -->
+    <!-- Application Structure Plan: A single-page, narrative flow design. It begins with a bold header to announce the event, followed by a section detailing the three celebrations using a card layout for clarity. Key logistical information (schedule, location) is grouped for easy access, with interactive buttons for maps. The "no gifts" policy is stated gently but clearly. The final section is a highly functional RSVP block with 'copy to clipboard' buttons to simplify the process for guests. This structure is intuitive for an invitation, guiding the user logically from "what" to "how". -->
+    <!-- Visualization & Content Choices: Content is organized into thematic cards (celebrations, logistics) with distinct icons (💍, 🎂, 🥳) for quick visual association. No charts are needed; the focus is on clear typography and layout. Key interactions are the 'Get Directions' button (links to Google Maps) and 'Copy' buttons for contact details, which directly address user needs and improve usability. These choices support the goal of a clear, elegant, and user-friendly interactive invitation. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #FDFCF9;
+            color: #3f3f46;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .icon-accent {
+            color: #c09a69;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <main class="container mx-auto px-4 py-12 md:py-20 max-w-4xl">
+
+        <header class="text-center mb-10 md:mb-12 reveal">
+            <h2 class="text-2xl md:text-3xl text-gray-500 mb-2">Vous êtes invités à</h2>
+            <h1 class="text-5xl md:text-7xl font-bold text-zinc-800">Trois Fêtes en Une !</h1>
+        </header>
+
+        <section class="mb-16 md:mb-20 reveal">
+            <div class="text-center max-w-2xl mx-auto">
+                <p class="text-lg text-gray-700">À vos agendas pour le <strong class="font-bold">samedi 30 août 2025</strong> ! Nous sommes heureux de vous inviter à célébrer avec nous.</p>
+            </div>
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div class="bg-white/60 p-6 rounded-xl shadow-sm border border-gray-200/50">
+                    <span class="text-5xl icon-accent">💍</span>
+                    <h3 class="text-2xl mt-4 mb-2">Nos 10 Ans de Mariage</h3>
+                    <p class="text-gray-600 text-sm">Dix années de rires, de complicité et d'aventures partagées... et ce n'est que le début !</p>
+                </div>
+                <div class="bg-white/60 p-6 rounded-xl shadow-sm border border-gray-200/50">
+                     <span class="text-5xl icon-accent">🎂</span>
+                    <h3 class="text-2xl mt-4 mb-2">Les 40 Ans de Samuel</h3>
+                    <p class="text-gray-600 text-sm">Un cap symbolique, une nouvelle décennie qui s'annonce riche en promesses !</p>
+                </div>
+                <div class="bg-white/60 p-6 rounded-xl shadow-sm border border-gray-200/50">
+                     <span class="text-5xl icon-accent">🥳</span>
+                    <h3 class="text-2xl mt-4 mb-2">Les 41 Ans de Marine</h3>
+                    <p class="text-gray-600 text-sm">Parce que les chiffres pas ronds sont aussi une raison de fêter !</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16 md:mb-20 grid grid-cols-1 md:grid-cols-5 gap-8 items-center reveal">
+             <div class="md:col-span-3 bg-white/60 p-8 rounded-xl shadow-sm border border-gray-200/50">
+                <h3 class="text-3xl md:text-4xl mb-6 text-center">Le Programme</h3>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <span class="icon-accent text-2xl mr-4 pt-1">🕒</span>
+                        <div>
+                            <p class="font-bold text-lg">Dès 15:00</p>
+                            <p class="text-gray-600">Apéro, goûter et retrouvailles. Venez quand vous voulez !</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="icon-accent text-2xl mr-4 pt-1">🚚</span>
+                        <div>
+                            <p class="font-bold text-lg">Dès 17:30</p>
+                            <p class="text-gray-600">Un food truck sera là pour régaler tout le monde pour le souper.</p>
+                        </div>
+                    </div>
+                </div>
+             </div>
+             <div class="md:col-span-2 bg-white/60 p-8 rounded-xl shadow-sm border border-gray-200/50 text-center">
+                <h3 class="text-3xl md:text-4xl mb-4">Le Lieu</h3>
+                <p class="text-lg mb-1">RDV chez nous !</p>
+                <p class="text-gray-600 mb-6">Route de la Broye 23<br>1700 Fribourg</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Route+de+la+Broye+23,+1700+Fribourg" target="_blank" class="inline-block bg-[#a17c54] text-white font-bold py-3 px-6 rounded-lg hover:bg-[#8f6d49] transition-colors">
+                    Obtenir l'itinéraire
+                </a>
+             </div>
+        </section>
+
+        <section class="text-center mb-16 md:mb-20 reveal">
+            <h3 class="text-3xl md:text-4xl mb-4">Le Plus Beau des Cadeaux</h3>
+            <p class="text-lg max-w-2xl mx-auto text-gray-700">Votre présence est le plus beau des cadeaux ! Vraiment, venez les mains vides, nous voulons juste vous avoir près de nous !</p>
+        </section>
+
+        <section class="bg-[#a17c54]/10 p-8 rounded-xl text-center reveal">
+            <h3 class="text-3xl md:text-4xl mb-2 text-[#6e563b]">Confirmez votre présence</h3>
+            <p class="text-lg mb-8 text-gray-700">Pour faciliter l’organisation, merci de nous répondre avant le <strong class="font-semibold">31 juillet</strong>.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-6 md:gap-10">
+                <div class="flex-1">
+                    <p class="font-semibold text-lg">Samuel</p>
+                    <div class="mt-2 flex justify-center items-center gap-2">
+                        <span id="phone1" class="text-gray-700">076 344 15 34</span>
+                        <button onclick="copyToClipboard('phone1', this)" class="bg-gray-200 text-gray-600 text-xs px-2 py-1 rounded hover:bg-gray-300 transition-colors">Copier</button>
+                    </div>
+                     <div class="mt-2 flex justify-center items-center gap-2">
+                        <span id="email1" class="text-gray-700 break-all">samuel.pasquier@gmx.ch</span>
+                        <button onclick="copyToClipboard('email1', this)" class="bg-gray-200 text-gray-600 text-xs px-2 py-1 rounded hover:bg-gray-300 transition-colors self-start">Copier</button>
+                    </div>
+                </div>
+                 <div class="flex-1">
+                    <p class="font-semibold text-lg">Marine</p>
+                     <div class="mt-2 flex justify-center items-center gap-2">
+                        <span id="phone2" class="text-gray-700">079 728 20 70</span>
+                        <button onclick="copyToClipboard('phone2', this)" class="bg-gray-200 text-gray-600 text-xs px-2 py-1 rounded hover:bg-gray-300 transition-colors">Copier</button>
+                    </div>
+                     <div class="mt-2 flex justify-center items-center gap-2">
+                        <span id="email2" class="text-gray-700 break-all">marineb84@yahoo.fr</span>
+                        <button onclick="copyToClipboard('email2', this)" class="bg-gray-200 text-gray-600 text-xs px-2 py-1 rounded hover:bg-gray-300 transition-colors self-start">Copier</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="text-center py-8 text-gray-500">
+        <p class="text-xl md:text-2xl font-semibold">Au plaisir de vous retrouver pour faire la fête !</p>
+    </footer>
+
+    <script>
+        function copyToClipboard(elementId, button) {
+            const textToCopy = document.getElementById(elementId).innerText;
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = textToCopy;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            try {
+                document.execCommand('copy');
+                const originalText = button.innerText;
+                button.innerText = 'Copié !';
+                setTimeout(() => {
+                    button.innerText = originalText;
+                }, 1500);
+            } catch (err) {
+                console.error('Impossible de copier', err);
+            }
+            document.body.removeChild(tempTextArea);
+        }
+
+        const revealElements = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        revealElements.forEach(elem => {
+            observer.observe(elem);
+        });
+    </script>
+</body>
+</html>
